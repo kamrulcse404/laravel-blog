@@ -14,15 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ArticlesController::class, 'index']);
 
-Route::get('articles', [ArticlesController::class, 'index']);
+// Route::get('articles', [ArticlesController::class, 'index']);
 
 Route::get('articles/create', [ArticlesController::class, 'create']);
-Route::post('articles', [ArticlesController::class, 'store']);
+// Route::post('articles', [ArticlesController::class, 'store']);
 
-Route::get('articles/{id}', [ArticlesController::class, 'show']);
-Route::put('articles/{id}', [ArticlesController::class, 'update']);
-Route::delete('articles/{id}', [ArticlesController::class, 'destroy']);
+// Route::get('articles/{id}', [ArticlesController::class, 'show']);
+// Route::put('articles/{id}', [ArticlesController::class, 'update']);
+// Route::delete('articles/{id}', [ArticlesController::class, 'destroy']);
