@@ -54,3 +54,9 @@
         </div>
     </div>
 @endsection
+
+@section('pagination')
+    @include('partials._pagination')
+@endsection
+
+
