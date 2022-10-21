@@ -14,8 +14,9 @@ class ArticlesController extends Controller
      */
     public function index()
     {
+        // dd(Article::paginate(5));
         return view('articles.dashboard', [
-            'articles' => Article::paginate(5)
+            'articles' => Article::paginate(6)
             // 'articles' => Article::all()
         ]);
     }
