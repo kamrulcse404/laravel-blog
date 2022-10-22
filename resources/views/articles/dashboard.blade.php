@@ -5,7 +5,7 @@
         <div class="card-header">
             <h4 style="color: #405e48;">
                 List of All Articles
-                <a href="/article/create" class="btn btn-outline-primary float-end">Add Article</a>
+                <a href="/articles/create" class="btn btn-outline-primary float-end">Add Article</a>
             </h4>
         </div>
 

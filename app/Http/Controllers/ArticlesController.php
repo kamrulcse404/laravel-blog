@@ -16,7 +16,7 @@ class ArticlesController extends Controller
     {
         // dd(Article::paginate(5));
         return view('articles.dashboard', [
-            'articles' => Article::paginate(6)
+            'articles' => Article::latest()->paginate(5)
             // 'articles' => Article::all()
         ]);
     }
@@ -28,7 +28,7 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        return view('articles.addArticle');
+        return view('articles.create');
     }
 
     /**
@@ -39,7 +39,13 @@ class ArticlesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $formRequest = $request->only([
+            'title',
+            'description',
+            'category',
+            'author'
+        ]);
+        Article::create($formRequest);
     }
 
     /**

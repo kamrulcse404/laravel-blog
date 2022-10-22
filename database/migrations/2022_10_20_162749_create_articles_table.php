@@ -20,7 +20,7 @@ return new class extends Migration
             $table->longText('description');
             $table->string('category', 100);
             $table->string('author');
-            $table->dateTime('published_at')->nullable();
+            // $table->dateTime('published_at')->nullable();
             $table->timestamps();
         });
     }
